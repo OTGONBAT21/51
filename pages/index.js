@@ -1,4 +1,4 @@
-import Baruun from "./baruun_tal";
+import Baruun from "./Zuun_tal";
 import Zuun from "./orgil";
 
 export default function Home() {
