@@ -13,7 +13,8 @@ export default function Zuun_tal() {
 
         <input
           className="w-96 h-10 border-2 border-gray-200 rounded-md  "
-          type="text"
+          type="email"
+          placeholder="Enter your email"
           name="enter your email"
           vabel=""
         />
