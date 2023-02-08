@@ -7,6 +7,7 @@ export default function Home() {
       <div className="w-creen h-screen flex ">
         <div className="w-1/2 h-full">
           <Baruun />
+          SJDFKLS
         </div>
         <div className=" w-1/2 h-full">
           <Zuun />
