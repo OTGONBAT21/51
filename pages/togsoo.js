@@ -1,1 +1,0 @@
-//sain bainy sda min
