@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.my-input {
-  @apply h-[78px] border-2 border-GrayBorder rounded-xl m-[18px] text-2xl focus:outline-none focus:border-Primary1 focus:ring-1 focus:ring-Primary1 p-6 max-w-[500px] min-w-[440px];
+.golden-box {
+  @apply w-[350px] h-[48px];
+}
+.air {
+  @apply w-full h-full;
 }

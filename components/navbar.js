@@ -1,5 +1,10 @@
+import React from "react";
+import Link from "next/link";
+
 export default function Navbar() {
-  return <div className=" w-screen h-16 bg-slate-600">
-    
-  </div>;
+  return (
+    <nav className="flex h-12 items-center px-8 justify-end shadow-md bg-SurfaceDisabled">
+      <Link href="/login">Нэвтрэх</Link>
+    </nav>
+  );
 }

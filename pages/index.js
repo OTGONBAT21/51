@@ -1,13 +1,10 @@
-import Navbar from "../components/Navbar";
+import React from "react";
+import LayOut from "@/components/LayOut";
 
-export default function Home() {
+export default function index() {
   return (
-    <div>
-      <Navbar />
-
-      <h1 className="text-3xl font-bold underline text-red-500">
-        Hello world!
-      </h1>
-    </div>
+    <>
+      <LayOut />
+    </>
   );
 }
