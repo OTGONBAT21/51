@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "@/components/Button";
-import InPut from "@/components/InPut";
+import Button from "@/components/input/UnderLine";
+import InPut from "@/components/input/InPut";
 import Link from "next/link";
 
 export default function login() {
@@ -22,7 +22,7 @@ export default function login() {
         </div>
         <Link href={"/"}>
           <div className="w-[238px] h-[44px]">
-            <button className="w-full h-full rounded-xl bg-Primary1 text-white font-bold shadow-xl shadow-red-300">
+            <button className="w-full h-full rounded-xl bg-Primary1 text-white font-bold shadow-xl shadow-red-300 justify-center">
               Нэвтрэх
             </button>
           </div>
