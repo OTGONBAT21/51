@@ -11,6 +11,7 @@ export default function login() {
   const router = useRouter();
 
   function login() {
+    console.log(username, password);
     fetch(process.env.API_URL + "/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -18,15 +19,20 @@ export default function login() {
         username,
         password,
       }),
-    }).then(async (res) => {
-      if (res.status == 401) {
-        setError("username password buruu baina");
-      } else if (res.status == 200) {
-        router.push("/admin");
-        const json = await res.json();
-        localStorage.setItem("token", json.token);
-      }
-    });
+    })
+      .then((res) => {
+        if (res.status == 401) {
+          setError("username password buruu baina");
+          return {};
+        } else if (res.status == 200) {
+          router.push("/admin");
+          return res.json();
+        }
+      })
+      .then((result) => {
+        console.log("token shuu", result.token);
+        localStorage.setItem("token", result.token);
+      });
   }
 
   return (
@@ -35,7 +41,10 @@ export default function login() {
         <img className="" src="/img/logo.jpg" width={86.75} />
       </div>
       <div className="flex flex-col w-[400px] h-[540px] gap-[24px] items-center bg-white rounded-[24px] p-[25px] pt-[90px]">
-        <div className="flex golden-box"></div>
+        <div className="flex golden-box">
+          <UnderLine>Хэрэглэгч</UnderLine>
+          <UnderLine>Байгууллага</UnderLine>
+        </div>
         <div className="flex flex-col w-[350px] gap-4">
           <InPut type="text" onChange={(e) => setUsername(e.target.value)}>
             Бүртгэлтэй И-мэйл хаяг/Утас

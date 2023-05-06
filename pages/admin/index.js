@@ -1,10 +1,14 @@
-import React from "react";
-import Layout from "@/components/layout/Temp";
-import Sales from "@/components/layout/Sales";
-import CouponRequest from "@/components/layout/CouponRequest";
-import Organization from "@/components/layout/Organization";
+import React, { useEffect } from "react";
+import Layout from "@/components/layout/Admin/Layout";
+import Sales from "@/components/layout/Admin/Sales";
+import CouponRequest from "@/components/layout/Admin/CouponRequest";
+import Organization from "@/components/layout/Admin/Report";
 
 export default function index() {
+  useEffect(
+    () => console.log("avsan token", localStorage.getItem("token")),
+    []
+  );
   return (
     <>
       <Layout>

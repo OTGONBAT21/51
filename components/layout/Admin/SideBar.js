@@ -1,5 +1,5 @@
 import React from "react";
-import MenuItem from "../input/MenuItem";
+import MenuItem from "../../input/MenuItem";
 import { useRouter } from "next/router";
 
 export default function SideBar() {
@@ -10,8 +10,8 @@ export default function SideBar() {
         <img className="mb-20" src="/img/logo.jpg" width={86.75} height={93} />
         <div className="h-full w-full ">
           <MenuItem
-            active={router.pathname == "/"}
-            href="/"
+            active={router.pathname == "/admin"}
+            href="/admin"
             gal={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +32,12 @@ export default function SideBar() {
             Хянах самбар
           </MenuItem>
           <MenuItem
-            active={router.pathname == "/organization"}
-            href="/organization"
+            active={router.pathname == "/admin/organization"}
+            href={
+              router.pathname == "/admin/organization"
+                ? ""
+                : "/admin/organization"
+            }
             gal={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,8 +58,8 @@ export default function SideBar() {
             Байгууллагууд
           </MenuItem>
           <MenuItem
-            active={router.pathname == "/coupon"}
-            href="/coupon"
+            active={router.pathname == "/admin/coupon"}
+            href={router.pathname == "/admin/coupon" ? "" : "/admin/coupon"}
             gal={
               <svg
                 xmlns="http://www.w3.org/2000/svg"

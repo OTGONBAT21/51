@@ -1,12 +1,12 @@
-import { useEffect } from "react";
 import { Chart } from "chart.js";
+import { useEffect } from "react";
 function Sales() {
   useEffect(() => {
     var ctx = document.getElementById("myChart").getContext("2d");
     var myChart = new Chart(ctx, {
       type: "line",
       data: {
-        labels: ["Sunday", "Monday", "Tuesday"],
+        labels: ["1", "2", "3", "4", "5", "6", "7"],
       },
     });
   }, []);
